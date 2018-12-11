@@ -32,6 +32,10 @@
       window.webkit.messageHandlers.callBackHandler.postMessage(postData);
   };
 
+  function setParentText(){
+
+  };
+
   var element_layer = document.getElementById('layer');
 
   function execDaumPostcode() {
@@ -79,6 +83,8 @@
             addr : fullRoadAddr
         };
 
+        opener.document.getElementById("postcode").value = data.postcode;
+        
         console.log(postData);
         window.postMessage(postData);
       },
