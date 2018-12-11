@@ -83,8 +83,11 @@
             addr : fullRoadAddr
         };
 
-        opener.document.getElementById("postcode").value = data.postcode;
-        
+
+        localStorage.setItem('name', data.postcode);
+        alert('Value set');
+
+
         console.log(postData);
         window.postMessage(postData);
       },
