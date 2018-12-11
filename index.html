@@ -13,7 +13,7 @@
 
       <input type="text" id="sample3_postcode" placeholder="우편번호"> -
       <input type="button" onclick="sample3_execDaumPostcode()" value="우편번호 찾기"><br>
-      <input type="button" onclick="sendData()" value="우편번호 찾기"><br>
+      <input type="button" onclick="sendData()" value="나의 우편번호"><br>
 
       <div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
         <img src="//t1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnFoldWrap" style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()" alt="접기 버튼">
@@ -90,11 +90,10 @@
             element_wrap.style.display = 'block';
         }
 
-
-        sendData(function(){
-          alert(document.getElementById('sample3_address').value);
-        });
-
+        function sendData() {
+            // iframe을 넣은 element를 안보이게 한다.
+            alert(document.getElementById('sample3_address').value);
+        }
 
     </script>
 </body>
