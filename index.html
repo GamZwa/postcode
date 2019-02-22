@@ -83,13 +83,9 @@
             addr : fullRoadAddr
         };
 
-
-        localStorage.setItem('name', data.postcode);
-        alert('Value set');
-
-
-        console.log(postData);
+        localStorage.setItem('fullRoadAddr', postData.addr);
         window.postMessage(postData);
+        //console.log(postData);
       },
       width : '100%',
       height : '100%'
