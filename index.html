@@ -18,6 +18,7 @@
     var action = event.data.action;
     var params = event.data.params;
     console.log("onReceivedPostMessage "+event);
+    alert("onReceivedPostMessage");
   };
 
   function onReceivedActivityMessageViaJavascriptInterface(json){
@@ -26,14 +27,16 @@
     var action = data.action;
     var params = data.params;
     console.log("onReceivedActivityMessageViaJavascriptInterface "+event);
+    alert("onReceivedActivityMessageViaJavascriptInterface");
   };
 
   function postMessage(postData) {
       window.webkit.messageHandlers.callBackHandler.postMessage(postData);
+      alert("postMessage");
   };
 
   function setParentText(){
-
+      alert("setParentText");
   };
 
   var element_layer = document.getElementById('layer');
@@ -85,8 +88,7 @@
 
         localStorage.setItem('fullRoadAddr', postData.addr);
         window.postMessage(postData);
-        alert("close!");
-        window.close();
+
         //console.log(postData);
       },
       width : '100%',
