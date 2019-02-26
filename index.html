@@ -33,7 +33,7 @@
   };
 
   function setParentText(){
-      
+
   };
 
   var element_layer = document.getElementById('layer');
@@ -80,10 +80,13 @@
         var postData = {
             postcode : data.postcode,
             zonecode : data.zonecode,
-            addr : fullRoadAddr
+            addr : fullRoadAddr,
+            loginOauth : 'OK'
+            
         };
 
         localStorage.setItem('fullRoadAddr', postData.addr);
+        localStorage.setItem('loginOauth', postData.loginOauth);
         //window.postMessage(postData);
 
         //console.log(postData);
