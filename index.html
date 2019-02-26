@@ -30,10 +30,11 @@
 
   function postMessage(postData) {
       window.webkit.messageHandlers.callBackHandler.postMessage(postData);
+      console.log("postMessage: "+postData);
   };
 
   function setParentText(){
-
+		console.log("setParentText");
   };
 
   var element_layer = document.getElementById('layer');
@@ -88,8 +89,8 @@
         localStorage.setItem('fullRoadAddr', postData.addr);
         localStorage.setItem('loginOauth', postData.loginOauth);
         //window.postMessage(postData);
-
-        //console.log(postData);
+        console.log(postData);
+        
       },
       width : '100%',
       height : '100%'
