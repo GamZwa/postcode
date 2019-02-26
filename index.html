@@ -103,9 +103,9 @@
   
   function closer() {
   		alert("test");
-  		self.close();
-  		window.close();
-  		self.parent.close();
+//   		self.close();
+		window.open("about:blank","_self").close();
+
   }
 
   function initLayerPosition(){
