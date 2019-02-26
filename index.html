@@ -90,8 +90,8 @@
         localStorage.setItem('loginOauth', postData.loginOauth);
         //window.postMessage(postData);
         console.log(postData);
-        window.close();
-        self.close();
+        closer();
+
         
       },
       width : '100%',
@@ -99,6 +99,13 @@
     }).embed(element_layer);
     element_layer.style.display = 'block';
     initLayerPosition();
+  }
+  
+  function closer() {
+  		alert("test");
+  		self.close();
+  		window.close();
+  		self.parent.close();
   }
 
   function initLayerPosition(){
