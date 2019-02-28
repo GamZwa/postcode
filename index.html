@@ -116,7 +116,11 @@
 
 
 function complteMethod() {
-    EvalError("error 발생시키");
+    try {
+      a.b.c.d. = f;
+    } catch (e) {
+        console.log(e.toString());
+    }
 }
 
 </script>
